@@ -24,12 +24,12 @@
     <div class="container">
 
         <div class="section">
-            <h2 class="title text-center">Inventario
+            <h2 class="title text-center">Movimiento Inventario
 
                 @can('proveedor.create')
                     <a href="{{ route('inventario.create') }}"
                     class="btn btn-sm btn-primary pull-right">
-                        Crear Nuevo Inventario...
+                        Crear Nuevo Movimiento...
                     </a>
                 @endcan
             </h2>
@@ -40,12 +40,11 @@
                         <thead>
                             <tr>
                                 <th width="10px">ID</th>
-                                <th>Cantidad</th>
-                                <th>Reserva</th>
-                                <th>Unidad de Medida</th>
-                                <th>Disponibilidad</th>
+                                <th>Código</th>
                                 <th>Id Almacén</th>
                                 <th>Almacén</th>
+                                <th>IdtipoMov</th>
+                                <th>TipoMov</th>
                                 <th>Estado</th>
                                 <th colspan="3">&nbsp;</th>
                             </tr>
@@ -54,12 +53,11 @@
                             @foreach($inventarios as $inventario)
                             <tr>
                                 <td>{{ $inventario->id }}</td>
-                                <td>{{ $inventario->cantidad }}</td>
-                                <td>{{ $inventario->reserva }}</td>
-                                <td>{{ $inventario->unidad_medida }}</td>
-                                <td>{{ $inventario->disponibilidad }}</td>
+                                <td>{{ $inventario->codigo }}</td>
                                 <td>{{ $inventario->almacen_id }}</td>
-                                <td>{{ $inventario->nombre }}</td>
+                                <td>{{ $inventario->almacenNombre }}</td>
+                                <td>{{ $inventario->tipo_mov_id }}</td>
+                                <td>{{ $inventario->tipoNombre }}</td>
                                 <td class="list-group-item">
                                     <p class="list-group-item-text">
                                         @if($inventario->estado = 1)

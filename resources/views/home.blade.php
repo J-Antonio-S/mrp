@@ -217,21 +217,6 @@
                     {{ session('notification') }}
                 </div>
             @endif
-
-            <ul class="nav nav-pills nav-pills-primary" role="tablist">
-                <li class="active">
-                    <a href="#dashboard" role="tab" data-toggle="tab">
-                        <i class="material-icons">dashboard</i>
-                        Gestión de Seguridad
-                    </a>
-                </li>
-                <li>
-                    <a href="#tasks" role="tab" data-toggle="tab">
-                        <i class="material-icons">list</i>
-                        Bitácora
-                    </a>
-                </li>
-            </ul>
         
             <hr>
             <div class="features">

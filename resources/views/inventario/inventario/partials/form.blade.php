@@ -1,29 +1,32 @@
+
 <div class="form-group">
-	{{ Form::label('cantidad', 'Cantidad:') }}
-	{{ Form::text('cantidad', null, ['class' => 'form-control', 'id' => 'cantidad']) }}
-</div>
-<div class="form-group">
-	{{ Form::label('reserva', 'Reserva:') }}
-	{{ Form::text('reserva', null, ['class' => 'form-control','id' => 'reserva']) }}
-</div>
-<div class="form-group">
-	{{ Form::label('unidad_medida', 'Unidad de medida:') }}
-	{{ Form::text('unidad_medida', null, ['class' => 'form-control','id' => 'unidad_medida']) }}
-</div>
-<div class="form-group">
-	{{ Form::label('disponibilidad', 'Disponibilidad:') }}
-	{{ Form::text('disponibilidad', null, ['class' => 'form-control','id' => 'disponibilidad']) }}
+	{{ Form::label('codigo', 'Codigo:') }}
+	{{ Form::text('codigo', null, ['class' => 'form-control','id' => 'codigo']) }}
 </div>
 <div class="form-group">
     {{Form::label('almacen_id','Seleccionar Almacén: ')}}
     <select name="almacen_id" id="almacen_id">Seleccionar Almacén
         @foreach($almacenes as $almacen)
             <option value="{{ $almacen->id }}"
-				@if( $almacen->id === $almacen->almacen_id)
+				@if( $almacen->id === $inventario->almacen_id)
 					selected
 				@endif
 				>
 				{{$almacen->nombre}}
+			</option>
+        @endforeach
+    </select>
+</div>
+<div class="form-group">
+    {{Form::label('tipo_mov_id','Seleccionar Tipo de Movimiento: ')}}
+    <select name="tipo_mov_id" id="tipo_mov_id">Seleccionar Tipo Mov
+        @foreach($tipo_movimiento as $tipo)
+            <option value="{{ $tipo->id }}"
+				@if( $tipo->id === $inventario->tipo_mov_id)
+					selected
+				@endif
+				>
+				{{$tipo->nombre}}
 			</option>
         @endforeach
     </select>

@@ -52,9 +52,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-
+                
                 <div class="nav-bar">
-                    <!-- Left Side Of Navbar -->
+                    <!-- Left Side Of Navbar 
                     <ul class="navbar-nav ml-auto">
                         @can('products.index')
                         <li class="nav-item">
@@ -76,7 +76,7 @@
                             <a class="nav-link" href="{{ route('bitacora') }}">Bitácora</a>
                         </li>
                         @endcan
-                    </ul>
+                    </ul>-->
                 </div>
 
 
@@ -106,14 +106,14 @@
                         
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ url('/home') }}">Carrito de compras</a>
+                                        <a href="{{ url('/home') }}">Home</a>
                                     </li>
                                     @if (auth()->user()->admin)
                                     <li>
                                         <a href="{{ url('/admin/categories') }}">Gestionar categorías</a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('/admin/products') }}">Gestionar productos</a>
+                                        <a href="{{ url('products') }}">Gestionar productos</a>
                                     </li>
                                     @endif
                                     <li>
@@ -136,7 +136,7 @@
         </nav>
        
         @if (session('info'))
-        <div class="alert alert-info" style="margin-top: 15%;">
+        <div class="alert alert-info" style="margin-top: 7%; margin-bottom: -13px;">
             <div class="container">
                 <div class="alert-icon">
                     <i class="material-icons">info_outline</i>

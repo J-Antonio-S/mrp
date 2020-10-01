@@ -50,6 +50,28 @@
           </a>
       </div>
   </div>
+
+  <div class="col-md-3">
+      <div class="info">
+          <a href="{{ route('almacen.index') }}">
+              <div class="icon icon-info">
+                  <i class="material-icons">account_balance</i>
+              </div>
+              <h4 class="info-title">Almacén</h4>
+          </a>
+      </div>
+  </div>
+
+  <div class="col-md-3">
+      <div class="info">
+          <a href="{{ route('inventario.index') }}">
+              <div class="icon icon-warning">
+                  <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="info-title">Mov Inventario</h4>
+          </a>
+      </div>
+  </div>
   
 
 </div>
