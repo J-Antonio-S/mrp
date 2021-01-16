@@ -203,7 +203,7 @@
 @endsection
 
 @section('content')
-<div class="page-header header-filter" style="background-image: url('{{ asset('img/city.jpg') }}');">
+<div class="page-header header-filter" style="background-image: url('{{ asset('img/fondo_header.png') }}');">
 </div>
 
 <div class="main main-raised">

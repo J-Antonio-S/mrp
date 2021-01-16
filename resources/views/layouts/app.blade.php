@@ -54,7 +54,7 @@
                 </div>
                 
                 <div class="nav-bar">
-                    <!-- Left Side Of Navbar 
+                    <!-- Left Side Of Navbar --> 
                     <ul class="navbar-nav ml-auto">
                         @can('products.index')
                         <li class="nav-item">
@@ -76,7 +76,7 @@
                             <a class="nav-link" href="{{ route('bitacora') }}">Bitácora</a>
                         </li>
                         @endcan
-                    </ul>-->
+                    </ul>
                 </div>
 
 

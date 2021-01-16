@@ -4,11 +4,11 @@
 </div>
 <div class="form-group">
 	{{ Form::label('description', 'Descripción:') }}
-	{{ Form::textarea('description', null, ['class' => 'form-control','rows' => '3']) }}
+	{{ Form::textarea('description', null, ['class' => 'form-control','rows' => '1']) }}
 </div>
 <div class="form-group">
 	{{ Form::label('description_long', 'Descripción Larga:') }}
-	{{ Form::textarea('long_description', null, ['class' => 'form-control','rows' => '5']) }}
+	{{ Form::textarea('long_description', null, ['class' => 'form-control','rows' => '2']) }}
 </div>
 <div class="form-group">
 	{{ Form::label('price', 'Precio:') }}

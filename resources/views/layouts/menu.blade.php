@@ -75,10 +75,12 @@
     .card-body {
       display: flex;
       flex-direction: column !important;
+      padding: .7375rem 1.075rem !important;
+      border: 0.2px solid #ca9999;
     }
     .detalle {
       margin: 4px;
-      padding: 5px;
+      padding: 0px;
       border: 1px solid #cccc33;
       border-radius: 7pt;
       background: #f9f9f9;
@@ -87,9 +89,13 @@
       justify-content: space-between;      
     }
     .item {
-      padding-right: 20px;
-      padding-left:  20px;
-      text-align: right;
+      border: .2px solid #cc9999;
+      margin:           0px;
+      padding-top:      0px;
+      padding-bottom:   0px; 
+      padding-right:    4px;
+      padding-left:     4px;
+      text-align: left;
     }
     /* VISTA EDIT & CREATE estilos que pertencen */
     .tarjeta {
@@ -119,27 +125,27 @@
           <li>
             <a class="nav-link" href="{{ route('ges_adm') }}">Gestión Administrativa</a>
             <ul class="nav flex-column">
-                <li><a class="nav-pills" href="{{ route('departamentos.index') }}">Departamento </a></li>
-                <li><a class="nav-pills" href="{{ route('areas.index') }}">Área </a></li>
-                <li><a class="nav-pills" href="{{ route('sucursales.index') }}">Sucursal </a></li>
-                <li><a class="nav-pills" href="{{ route('cargos.index') }}">Cargo </a></li>
-                <li><a class="nav-pills" href="{{ route('empleados.index') }}">Empleado </a></li>
+                <li><a class="nav-pills" href="#">Departamento </a></li>
+                <li><a class="nav-pills" href="#">Área </a></li>
+                <li><a class="nav-pills" href="#">Sucursal </a></li>
+                <li><a class="nav-pills" href="#">Cargo </a></li>
+                <li><a class="nav-pills" href="#">Empleado </a></li>
             </ul>
           </li> 
             <li>
-                <a class="nav-link" href="{{ route('nomina') }}">Nómina</a>
+                <a class="nav-link" href="#">Nómina</a>
                 <ul class="nav flex-column">
-                <li><a class="nav-pills" href="{{ route('nomina') }}">Nómina </a></li>
+                <li><a class="nav-pills" href="#">Nómina </a></li>
                 </ul>
             </li>
             <li>
               <a class="nav-link" href="{{ route('inventario') }}">Inventarios</a>
                 <ul class="nav flex-column">
-                    <li><a class="nav-pills" href="{{route('proveedor.index')}}">Proveedor </a></li>
-                    <li><a class="nav-pills" href="{{route('materia_prima.index')}}">Materia Prima </a></li>
-                    <li><a class="nav-pills" href="{{route('articulo.index')}}">Articulo </a></li>
-                    <li><a class="nav-pills" href="{{route('almacen.index')}}">Almacén </a></li>
-                    <li><a class="nav-pills" href="{{route('inventario.index')}}"> Mov Inventario </a></li>
+                    <li><a class="nav-pills" href="#">Proveedor </a></li>
+                    <li><a class="nav-pills" href="#">Materia Prima </a></li>
+                    <li><a class="nav-pills" href="#">Articulo </a></li>
+                    <li><a class="nav-pills" href="#">Almacén </a></li>
+                    <li><a class="nav-pills" href="#"> Mov Inventario </a></li>
                 </ul>
             </li>
             <li>

@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.menu')
 
-@section('title', 'Bienvenido a ' . config('app.name'))
+@section('title', 'Productos')
 
 @section('body-class', 'landing-page')
 
@@ -16,7 +16,7 @@
     </style>
 @endsection
 
-@section('content')
+@section('contenido-central')
 <div class="main ">
     <div class="container">
 
@@ -90,6 +90,4 @@
     </div>
         
 </div>
-
-@include('includes.footer')
 @endsection

@@ -20,7 +20,7 @@
 <div class="row">
   <div class="col-md-3">
       <div class="info">
-          <a class="" href="{{ route('departamentos.index') }}">
+          <a class="" href="#">
               <div class="icon icon-primary">
                   <i class="material-icons">apartment</i>
               </div>
@@ -31,7 +31,7 @@
 
   <div class="col-md-3">
       <div class="info">
-          <a class="" href="{{ route('areas.index') }}">
+          <a class="" href="#">
               <div class="icon icon-success">
                   <i class="material-icons">local_library</i>
               </div>
@@ -42,7 +42,7 @@
 
   <div class="col-md-3">
       <div class="info">
-          <a href="{{ route('sucursales.index') }}">
+          <a href="#">
               <div class="icon icon-danger">
                   <i class="material-icons">satellite</i>
               </div>
@@ -53,7 +53,7 @@
   
   <div class="col-md-3">
       <div class="info">
-          <a href="{{ route('cargos.index') }}">
+          <a href="#">
               <div class="icon icon-warning">
                   <i class="material-icons">assignment_late</i>
               </div>
@@ -64,7 +64,7 @@
 
   <div class="col-md-3">
       <div class="info">
-          <a href="{{ route('empleados.index') }}">
+          <a href="#">
               <div class="icon icon-info">
                   <i class="material-icons">person</i>
               </div>
