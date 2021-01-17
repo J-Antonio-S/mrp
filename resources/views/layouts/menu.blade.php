@@ -89,7 +89,6 @@
       justify-content: space-between;      
     }
     .item {
-      border: .2px solid #cc9999;
       margin:           0px;
       padding-top:      0px;
       padding-bottom:   0px; 
@@ -123,7 +122,7 @@
         <header class="">Sistema MRP</header>
         <ul class="nav flex-column">
           <li>
-            <a class="nav-link" href="{{ route('ges_adm') }}">Gestión Administrativa</a>
+            <a class="nav-link" href="{{ route('ges_adm') }}">Sprint 1</a>
             <ul class="nav flex-column">
                 <li><a class="nav-pills" href="#">Departamento </a></li>
                 <li><a class="nav-pills" href="#">Área </a></li>

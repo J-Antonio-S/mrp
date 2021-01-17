@@ -21,7 +21,7 @@
 @endsection
 
 @section('content')
-<div class="page-header header-filter" style="background-image: url('{{ asset('/img/fondo_principal.jpg') }}');">
+<div class="page-header header-filter" style="background-image: url('{{ asset('/img/fondo_welcome.jpg') }}');">
     <div class="container">
         <div class="row">
             <div class="col-md-7">

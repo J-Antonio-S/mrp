@@ -56,10 +56,10 @@
                   </p>
                 </div>
                 <div class="card-footer justify-content-center">
-                  <a href="https://twitter.com/RedsJustiniano" class="btn btn-just-icon btn-link btn-twitter">
+                  <a href="#" class="btn btn-just-icon btn-link btn-twitter">
                     <i class="fa fa-twitter"></i>
                   </a>
-                  <a href="https://www.facebook.com/andresalvaro.justinianoh" class="btn btn-just-icon btn-link btn-facebook">
+                  <a href="#" class="btn btn-just-icon btn-link btn-facebook">
                     <i class="fa fa-facebook-square"></i>
                   </a>
                   <a href="#" class="btn btn-just-icon btn-link btn-google">
@@ -102,7 +102,7 @@
                   <h4 class="card-title">Juan Daniel Pacheco </h4>
                   <h6 class="category text-muted">Programador  </h6>
                   <p class="card-description">
-                    Programador de las vistas del sistema, dale cigarrillos y te programará todo.
+                    Programador de los modelos, vistas y controladores del sistema.
                   </p>
                 </div>
                 <div class="card-footer justify-content-center">
@@ -121,10 +121,54 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <h4 class="card-title">Juan Antonio Pesoa </h4>
-                  <h6 class="category text-muted">No se sabe que hace </h6>
+                  <h4 class="card-title">Luismar Pelayo Tapia </h4>
+                  <h6 class="category text-muted">Programador </h6>
                   <p class="card-description">
-                    Descripción? por descubrir.
+                  Programador de los modelos, vistas y controladores del sistema.
+                  </p>
+                </div>
+                <div class="card-footer justify-content-center">
+                  <a href="#" class="btn btn-just-icon btn-link btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card card-profile card-plain">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="{{'/img/faces/card-profile4-square.jpg'}}">
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Juan Antonio Pesoa </h4>
+                  <h6 class="category text-muted">Programador </h6>
+                  <p class="card-description">
+                  Programador de los modelos, vistas y controladores del sistema.
+                  </p>
+                </div>
+                <div class="card-footer justify-content-center">
+                  <a href="#" class="btn btn-just-icon btn-link btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card card-profile card-plain">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="{{'/img/faces/card-profile5-square.jpg'}}">
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Jhaneth Celene Velasquez </h4>
+                  <h6 class="category text-muted">Programador </h6>
+                  <p class="card-description">
+                  Programador de los modelos, vistas y controladores del sistema.
                   </p>
                 </div>
                 <div class="card-footer justify-content-center">
