@@ -124,8 +124,8 @@
           <li>
             <a class="nav-link" href="{{ route('ges_adm') }}">Sprint 1</a>
             <ul class="nav flex-column">
-                <li><a class="nav-pills" href="#">Departamento </a></li>
-                <li><a class="nav-pills" href="#">Área </a></li>
+                <li><a class="nav-pills" href="{{ route('departamentos.index') }}">Departamento </a></li>
+                <li><a class="nav-pills" href="{{ route('area.index') }}">Área </a></li>
                 <li><a class="nav-pills" href="#">Sucursal </a></li>
                 <li><a class="nav-pills" href="#">Cargo </a></li>
                 <li><a class="nav-pills" href="#">Empleado </a></li>
