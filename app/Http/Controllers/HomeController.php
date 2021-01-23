@@ -29,7 +29,7 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function ges_adm(){
+   public function ges_adm(){
         return view('gestion-administrativa.ges_adm');
     }
     public function nomina(){
@@ -47,7 +47,9 @@ class HomeController extends Controller
             ->paginate(15);
         return view('nomina.nomina', compact('empleados'));
     }
-    public function inventario(){
-        return view('inventario.inventario');
+      public function inventario(){
+      return view('inventario.inventario');
     }
+
 }
+  

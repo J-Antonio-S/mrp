@@ -1,5 +1,5 @@
 {
-    "name": "Produccion",
+    "name": "laravel/laravel",
     "type": "project",
     "description": "Sistema de procesos de producción.",
     "keywords": [
