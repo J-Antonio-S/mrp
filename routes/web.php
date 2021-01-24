@@ -63,7 +63,11 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('users/{user}/edit', 'UserController@edit')->name('users.edit')
 		->middleware('can:users.edit');
-	//Products
+	
+	
+	
+
+		//Products
 	Route::post('products/store', 'ProductController@store')->name('products.store')
 		->middleware('can:products.create');
 
@@ -84,6 +88,53 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit')
 		->middleware('can:products.edit');
+
+		//Sucursals
+		Route::post('sucursals/store', 'SucursalController@store')->name('sucursals.store')
+		->middleware('can:sucursals.create');
+
+	Route::get('sucursals', 'SucursalController@index')->name('sucursals.index')
+		->middleware('can:sucursals.index');
+
+	Route::get('sucursals/create', 'SucursalController@create')->name('sucursals.create')
+		->middleware('can:sucursals.create');
+
+	Route::put('sucursals/{sucursal}', 'SucursalController@update')->name('sucursals.update')
+		->middleware('can:sucursals.edit');
+
+	Route::get('sucursals/{sucursal}', 'SucursalController@show')->name('sucursals.show')
+		->middleware('can:sucursals.show');
+
+	Route::delete('sucursals/{sucursal}', 'SucursalController@destroy')->name('sucursals.destroy')
+		->middleware('can:sucursals.destroy');
+
+	Route::get('sucursals/{sucursal}/edit', 'SucursalController@edit')->name('sucursals.edit')
+		->middleware('can:sucursals.edit');
+
+		
+	
+				//almacens
+	Route::post('almacens/store', 'AlmacenController@store')->name('almacens.store')
+	->middleware('can:almacens.create');
+
+Route::get('almacens', 'AlmacenController@index')->name('almacens.index')
+	->middleware('can:almacens.index');
+
+Route::get('almacens/create', 'AlmacenController@create')->name('almacens.create')
+	->middleware('can:almacens.create');
+
+Route::put('almacens/{almacen}', 'AlmacenController@update')->name('almacens.update')
+	->middleware('can:almacens.edit');
+
+Route::get('almacens/{almacen}', 'AlmacenController@show')->name('almacens.show')
+	->middleware('can:almacens.show');
+
+Route::delete('almacens/{almacen}', 'AlmacenController@destroy')->name('almacens.destroy')
+	->middleware('can:almacens.destroy');
+
+Route::get('almacens/{almacen}/edit', 'AlmacenController@edit')->name('almacens.edit')
+	->middleware('can:almacens.edit');
+
 
 
 			//Products

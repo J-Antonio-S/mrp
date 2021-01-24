@@ -61,6 +61,16 @@
                             <a class="nav-link" href="{{ route('products.index') }}">Productos</a>
                         </li>
                         @endcan
+                        @can('sucursals.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('sucursals.index') }}">Sucursal</a>
+                        </li>
+                        @endcan
+                        @can('almacens.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('almacens.index') }}">Almacen</a>
+                        </li>
+                        @endcan
                         @can('users.index')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('users.index') }}">Usuarios</a>
