@@ -20,7 +20,7 @@
 <div class="row">
   <div class="col-md-3">
       <div class="info">
-          <a class="" href="#">
+          <a class="" href="{{route('departamentos.index')}}">
               <div class="icon icon-primary">
                   <i class="material-icons">apartment</i>
               </div>
@@ -31,7 +31,7 @@
 
   <div class="col-md-3">
       <div class="info">
-          <a class="" href="#">
+          <a class="" href="{{route('area.index')}}">
               <div class="icon icon-success">
                   <i class="material-icons">local_library</i>
               </div>
