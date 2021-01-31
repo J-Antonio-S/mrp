@@ -15,6 +15,7 @@ class Estado extends Model
     protected $fillable =[
     	'codigo',
     	'nombre',
+      'tipo_estado',
     	'estado'
     ];
 
@@ -22,3 +23,4 @@ class Estado extends Model
 
     ];
 }
+

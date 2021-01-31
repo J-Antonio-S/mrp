@@ -124,9 +124,10 @@
           <li>
             <a class="nav-link" href="{{ route('ges_adm') }}">Sprint 1</a>
             <ul class="nav flex-column">
-                <li><a class="nav-pills" href="#">Departamento </a></li>
-                <li><a class="nav-pills" href="#">Área </a></li>
-                <li><a class="nav-pills" href="#">Sucursal </a></li>
+                <li><a class="nav-pills" href="{{ route('departamentos.index') }}">Departamento </a></li>
+                <li><a class="nav-pills" href="{{ route('area.index') }}">Área </a></li>
+                <li><a class="nav-pills" href="{{ route('sucursals.index') }}">Sucursal </a></li>
+                <li><a class="nav-pills" href="{{ route('almacens.index') }}">Almacén </a></li>
                 <li><a class="nav-pills" href="#">Cargo </a></li>
                 <li><a class="nav-pills" href="#">Empleado </a></li>
             </ul>
@@ -143,7 +144,7 @@
                     <li><a class="nav-pills" href="#">Proveedor </a></li>
                     <li><a class="nav-pills" href="#">Materia Prima </a></li>
                     <li><a class="nav-pills" href="#">Articulo </a></li>
-                    <li><a class="nav-pills" href="#">Almacén </a></li>
+                   
                     <li><a class="nav-pills" href="#"> Mov Inventario </a></li>
                 </ul>
             </li>
