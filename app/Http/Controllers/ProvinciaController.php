@@ -30,14 +30,14 @@ class ProvinciaController extends Controller
     		->orderBy('p.id','asc')
     		->paginate(7);
             //dd($provincias);
-    		return view('gestion-administrativa.provincia.index',["provincias"=>$provincias,"searchText"=>$query]);
+    		return view('sprint1.provincia.index',["provincias"=>$provincias,"searchText"=>$query]);
     	}
     }
 
     public function create()
     {
     	$estados=DB::table('estado')->where('estado','=','1')->get();
-    	return view("gestion-administrativa.provincia.create",["estados"=>$estados]);
+    	return view("sprint1.provincia.create",["estados"=>$estados]);
     }
 
     public function store(ProvinciaFormRequest $request)
@@ -49,19 +49,19 @@ class ProvinciaController extends Controller
     	$provincia->estado='1';
     	$provincia->save();
 
-    	return Redirect::to('gestion-administrativa/provincia');
+    	return Redirect::to('sprint1/provincia');
     }
 
     public function show($id)
     {
-    	return view("gestion-administrativa.provincia.show",["provincia"=>Provincia::findOrFail($id)]);
+    	return view("sprint1.provincia.show",["provincia"=>Provincia::findOrFail($id)]);
     }
 
     public function edit($id)
     {
         $provincia=Provincia::findOrFail($id);
         $estados=DB::table('estado')->where('estado','=','1')->get();
-    	return view("gestion-administrativa.provincia.edit",["provincia"=>$provincia,"estados"=>$estados]);
+    	return view("sprint1.provincia.edit",["provincia"=>$provincia,"estados"=>$estados]);
     }
 
     public function update(ProvinciaFormRequest $request,$id)
@@ -72,7 +72,7 @@ class ProvinciaController extends Controller
         $provincia->id_estado=$request->get('id_estado');
     	$provincia->update();
 
-    	return Redirect::to('gestion-administrativa/provincia');
+    	return Redirect::to('sprint1/provincia');
     }
 
     public function destroy($id)
@@ -81,6 +81,6 @@ class ProvinciaController extends Controller
         $provincia->estado='0';
         $provincia->update();
 
-        return Redirect::to('gestion-administrativa/provincia');
+        return Redirect::to('sprint1/provincia');
     }
 }

@@ -128,9 +128,9 @@
                 <li><a class="nav-pills" href="{{ route('area.index') }}">Área </a></li>
                 <li><a class="nav-pills" href="{{ route('sucursals.index') }}">Sucursal </a></li>
                 <li><a class="nav-pills" href="{{ route('almacens.index') }}">Almacén </a></li>
-                <li><a class="nav-pills" href="#">Municipio </a></li>
-                <li><a class="nav-pills" href="#">Provincia </a></li>
-                <li><a class="nav-pills" href="#">Estado </a></li>
+                <li><a class="nav-pills" href="sprint1/municipio">Municipio </a></li>
+                <li><a class="nav-pills" href="sprint1/provincia">Provincia </a></li>
+                <li><a class="nav-pills" href="sprint1/estado">Estado </a></li>
                 <li><a class="nav-pills" href="#">Cargo </a></li>
                 <li><a class="nav-pills" href="#">Empleado </a></li>
             </ul>

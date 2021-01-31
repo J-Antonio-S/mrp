@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Gestión Administrativa | MRP')
+@section('title', 'Municipio | MRP')
 
 @section('styles')
     <style>
@@ -20,7 +20,7 @@
     <div class="row">
     	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
     		<h3>Lista de Municipios <a href="municipio/create"><button class="btn btn-success">Nuevo</button></a></h3>
-    		@include('gestion-administrativa.municipio.search')
+    		@include('sprint1.municipio.search')
     	</div>
     </div>
 
@@ -46,7 +46,7 @@
                             <a href="" data-target="#modal-delete-{{ $mun->id }}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
                         </td>
                     </tr>
-                    @include('gestion-administrativa.municipio.modal')
+                    @include('sprint1.municipio.modal')
                     @endforeach
     			</table>
     		</div>

@@ -1,6 +1,6 @@
 @extends ('layouts.menu')
 
-@section('title', 'Gestión Administrativa | MRP')
+@section('title', 'Estado | MRP')
 
 @section('styles')
     <style>

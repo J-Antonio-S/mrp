@@ -30,14 +30,14 @@ class MunicipioController extends Controller
             ->orderBy('m.id','asc')
             ->paginate(7);
             //dd($provincias);
-            return view('gestion-administrativa.municipio.index',["municipios"=>$municipios,"searchText"=>$query]);
+            return view('sprint1.municipio.index',["municipios"=>$municipios,"searchText"=>$query]);
         }
     }
 
     public function create()
     {
         $provincias=DB::table('provincia')->where('estado','=','1')->get();
-        return view("gestion-administrativa.municipio.create",["provincias"=>$provincias]);
+        return view("sprint1.municipio.create",["provincias"=>$provincias]);
     }
 
     public function store(MunicipioFormRequest $request)
@@ -49,19 +49,19 @@ class MunicipioController extends Controller
         $municipio->estado='1';
         $municipio->save();
 
-        return Redirect::to('gestion-administrativa/municipio');
+        return Redirect::to('sprint1/municipio');
     }
 
     public function show($id)
     {
-        return view("gestion-administrativa.municipio.show",["municipio"=>Municipio::findOrFail($id)]);
+        return view("sprint1.municipio.show",["municipio"=>Municipio::findOrFail($id)]);
     }
 
     public function edit($id)
     {
         $municipio=Municipio::findOrFail($id);
         $provincias=DB::table('provincia')->where('estado','=','1')->get();
-        return view("gestion-administrativa.municipio.edit",["municipio"=>$municipio,"provincias"=>$provincias]);
+        return view("sprint1.municipio.edit",["municipio"=>$municipio,"provincias"=>$provincias]);
     }
 
     public function update(MunicipioFormRequest $request,$id)
@@ -72,7 +72,7 @@ class MunicipioController extends Controller
         $municipio->id_provincia=$request->get('id_provincia');
         $municipio->update();
 
-        return Redirect::to('gestion-administrativa/municipio');
+        return Redirect::to('sprint1/municipio');
     }
 
     public function destroy($id)
@@ -81,6 +81,6 @@ class MunicipioController extends Controller
         $municipio->estado='0';
         $municipio->update();
 
-        return Redirect::to('gestion-administrativa/municipio');
+        return Redirect::to('sprint1/municipio');
     }
 }

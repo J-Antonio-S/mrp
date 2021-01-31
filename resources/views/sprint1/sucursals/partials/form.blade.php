@@ -14,13 +14,13 @@
 
 
 <div class="form-group">
-    {{Form::label('estado','Seleccionar proveedor: ')}}
+    {{Form::label('estado','Seleccionar Estado: ')}}
     <select name="estado" id="estado">Seleccionar estado
         @foreach($estados as $estado)
-            <option value="{{ $estado->id_estado }}"
+            <option value="{{ $estado->id }}"
 				
 				>
-				{{$estado->tipo_estado}}
+				{{$estado->nombre}}
 			</option>
         @endforeach
     </select>

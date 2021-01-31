@@ -1,6 +1,6 @@
 @extends ('layouts.menu')
 
-@section('title', 'Gestión Administrativa | MRP')
+@section('title', 'Estado | MRP')
 
 @section('styles')
     <style>
@@ -29,7 +29,7 @@
     			</ul>
     		</div>
     		@endif 
-            {!! Form::open(array('url'=>'gestion-administrativa/estado','method'=>'POST','autocomplete'=>'off')) !!}
+            {!! Form::open(array('url'=>'sprint1/estado','method'=>'POST','autocomplete'=>'off')) !!}
             {{ Form::token() }}
             <div class="form-group">
             	<label for="codigo">Codigo</label>

@@ -25,13 +25,13 @@ class EstadoController extends Controller
     		->where('estado','=','1')
     		->orderBy('id','asc')
     		->paginate(7);
-    		return view('gestion-administrativa.estado.index',["estados"=>$estados,"searchText"=>$query]);
+    		return view('sprint1.estado.index',["estados"=>$estados,"searchText"=>$query]);
     	}
     }
 
     public function create()
     {
-    	return view("gestion-administrativa.estado.create");
+    	return view("sprint1.estado.create");
     }
 
     public function store(EstadoFormRequest $request)
@@ -42,17 +42,17 @@ class EstadoController extends Controller
     	$estado->estado='1';
     	$estado->save();
 
-    	return Redirect::to('gestion-administrativa/estado');
+    	return Redirect::to('sprint1/estado');
     }
 
     public function show($id)
     {
-    	return view("gestion-administrativa.estado.show",["estado"=>Estado::findOrFail($id)]);
+    	return view("sprint1.estado.show",["estado"=>Estado::findOrFail($id)]);
     }
 
     public function edit($id)
     {
-    	return view("gestion-administrativa.estado.edit",["estado"=>Estado::findOrFail($id)]);
+    	return view("sprint1.estado.edit",["estado"=>Estado::findOrFail($id)]);
     }
 
     public function update(EstadoFormRequest $request,$id)
@@ -62,7 +62,7 @@ class EstadoController extends Controller
     	$estado->nombre=$request->get('nombre');
     	$estado->update();
 
-    	return Redirect::to('gestion-administrativa/estado');
+    	return Redirect::to('sprint1/estado');
     }
 
     public function destroy($id)
@@ -71,6 +71,6 @@ class EstadoController extends Controller
     	$estado->estado='0';
     	$estado->update();
 
-    	return Redirect::to('gestion-administrativa/estado');
+    	return Redirect::to('sprint1/estado');
     }
 }

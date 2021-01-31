@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Gestión Administrativa | MRP')
+@section('title', 'Estado | MRP')
 
 @section('styles')
     <style>
@@ -20,7 +20,7 @@
     <div class="row">
     	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
     		<h3>Lista de Estados <a href="estado/create"><button class="btn btn-success">Nuevo</button></a></h3>
-    		@include('gestion-administrativa.estado.search')
+    		@include('sprint1.estado.search')
     	</div>
     </div>
 
@@ -44,7 +44,7 @@
     						<a href="" data-target="#modal-delete-{{ $est->id }}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
     					</td>
     				</tr>
-    				@include('gestion-administrativa.estado.modal')
+    				@include('sprint1.estado.modal')
     				@endforeach
     			</table>
     		</div>

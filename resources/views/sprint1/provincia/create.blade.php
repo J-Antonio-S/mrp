@@ -1,6 +1,6 @@
 @extends ('layouts.menu')
 
-@section('title', 'Gestión Administrativa | MRP')
+@section('title', 'Provincia | MRP')
 
 @section('styles')
     <style>
@@ -31,7 +31,7 @@
     		@endif
         </div>    
     </div>
-            {!! Form::open(array('url'=>'gestion-administrativa/provincia','method'=>'POST','autocomplete'=>'off')) !!}
+            {!! Form::open(array('url'=>'sprint1/provincia','method'=>'POST','autocomplete'=>'off')) !!}
             {{ Form::token() }}
 
 

@@ -182,14 +182,19 @@ Route::middleware(['auth'])->group(function () {
         ->middleware('can:area.create');
 
     Route::post('area/store', 'AreaController@store')->name('areas.store')
-        ->middleware('can:area.create');
+		->middleware('can:area.create');
+		
+	//Estado
+	Route::resource('sprint1/estado','EstadoController');
 
+	//Provincia
+	Route::resource('sprint1/provincia','ProvinciaController');
+
+	//Municipio
+	Route::resource('sprint1/municipio','MunicipioController');
 
 });
 
 
-Route::resource('gestion-administrativa/estado','EstadoController');
 
-Route::resource('gestion-administrativa/provincia','ProvinciaController');
 
-Route::resource('gestion-administrativa/municipio','MunicipioController');
