@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSucursalTable extends Migration
+class CreateSucursalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,10 +19,10 @@ class CreateSucursalTable extends Migration
             $table->string('descripcion', 255);
             $table->string('direccion', 255);
 
-            $table->tinyint('estado')->unsigned();
-            $table->foreign('estado')->references('id_estado')->on('estados')
-                  ->onDelete('cascade')
-                  ->onUpdate('cascade'); 
+            $table->tinyInteger('estado')->unsigned();
+            $table->foreign('estado')->references('id_estado')->on('estado')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade'); 
        
             $table->timestamps();
         });
@@ -35,6 +35,6 @@ class CreateSucursalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sucursal');
+        Schema::dropIfExists('sucursals');
     }
 }

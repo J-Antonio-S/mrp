@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Producto '. $departamento->name .' | MRP')
+@section('title', $departamento->name .' | MRP')
 
 @section('body-class', 'landing-page')
 

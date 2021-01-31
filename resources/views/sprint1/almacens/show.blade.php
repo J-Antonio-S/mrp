@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Almacene '. $almacen->name .' | MRP')
+@section('title', 'Almacén '. $almacen->name .' | MRP')
 
 @section('body-class', 'landing-page')
 
@@ -17,7 +17,7 @@
         </div>
         <div class="card-body">
             <span class="detalle">
-                <h6 class="item col-md-4">Nombre:</h6>
+                <h6 class="item col-md-4">Código:</h6>
                 <p class="item col-md-8">{{ $almacen->codigo }}</p>
             </span>
             <span class="detalle">
@@ -25,10 +25,13 @@
                 <p class="item col-md-8">{{ $almacen->descripcion }}</p>
             </span>
             <span class="detalle">
-                <h6 class="item col-md-4">Descripción larga: </h6>
-                <p class="item col-md-8">{{ $almacen->id_sucursal }}</p>
+                <h6 class="item col-md-4">Sucursal: </h6>
+                <p class="item col-md-8">{{ $almacen->sucursal }}</p>
             </span>
         
+        </div>
+        <div class=" text-muted">
+            Código: {{ $almacen->id }} 
         </div>
 
     </div>

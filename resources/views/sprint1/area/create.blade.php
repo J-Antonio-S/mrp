@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Crear')
+@section('title', 'Crear | MRP')
 
 @section('body-class', 'landing-page')
 
@@ -20,16 +20,14 @@
 
         <div class="tarjeta">
             <div class="card card-crud card-nav-tabs text-center">
-                {!! Form::open(['route' => ['almacens.store']]) !!}
+                {!! Form::open(['route' => ['areas.store']]) !!}
 
-                @include('almacens.partials.form')
+                @include('sprint1.area.partials.form')
 
                 {!! Form::close() !!}
             </div>
         </div>
-
     </div>
         
 </div>
-
 @endsection

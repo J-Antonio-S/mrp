@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Crear | MRP')
+@section('title', 'Editar')
 
 @section('body-class', 'landing-page')
 
@@ -20,14 +20,15 @@
 
         <div class="tarjeta">
             <div class="card card-crud card-nav-tabs text-center">
-                {!! Form::open(['route' => ['areas.store']]) !!}
+                {!! Form::model($departamento, ['route' => ['departamentos.update', $departamento->id], 'method' => 'PUT']) !!}
 
-                @include('gestion-administrativa.area.partials.form')
+                @include('sprint1/departamentos.partials.form')
 
                 {!! Form::close() !!}
             </div>
         </div>
-    </div>
-        
+
+    </div>        
 </div>
+
 @endsection

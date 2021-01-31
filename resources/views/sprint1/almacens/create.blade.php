@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Editar')
+@section('title', 'Crear')
 
 @section('body-class', 'landing-page')
 
@@ -20,15 +20,16 @@
 
         <div class="tarjeta">
             <div class="card card-crud card-nav-tabs text-center">
-                {!! Form::model($sucursal, ['route' => ['sucursals.update', $sucursal->id], 'method' => 'PUT']) !!}
+                {!! Form::open(['route' => ['almacens.store']]) !!}
 
-                @include('sucursals.partials.form')
+                @include('sprint1.almacens.partials.form')
 
                 {!! Form::close() !!}
             </div>
         </div>
 
-    </div>        
+    </div>
+        
 </div>
 
 @endsection

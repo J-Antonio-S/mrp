@@ -18,25 +18,25 @@
         </div>
         <div class="card-body">
             <span class="detalle">
-                <h6 class="item">Nombre:</h6>
-                <p class="item">{{ $area->nombre }}</p>
+                <h6 class="item col-md-4">Nombre:</h6>
+                <p class="item col-md-8">{{ $area->nombre }}</p>
             </span>
             <span class="detalle">
-                <h6 class="item">Código:</h6>
-                <p class="item">{{ $area->codigo }}</p>
+                <h6 class="item col-md-4">Código:</h6>
+                <p class="item col-md-8">{{ $area->codigo }}</p>
             </span>
             <span class="detalle">
-                <h6 class="item">Departamento:</h6>
-                <p class="item">{{ $area->departamento->nombre }}</p>
+                <h6 class="item col-md-4">Departamento:</h6>
+                <p class="item col-md-8">{{ $area->departamento->nombre }}</p>
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Estado: </h6>
                 <p class="item col-md-8">
-                @if($area->estado == 1)
-                    Activo
-                @else
-                    Inactivo
-                @endif
+                    @if($area->estado == 1)
+                        Activo
+                    @else
+                        Inactivo
+                    @endif
                 </p>
                 
             </span>

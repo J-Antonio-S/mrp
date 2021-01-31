@@ -22,7 +22,7 @@
             <div class="card card-crud card-nav-tabs text-center">
                 {!! Form::model($almacen, ['route' => ['almacens.update', $almacen->id], 'method' => 'PUT']) !!}
 
-                @include('almacens.partials.form')
+                @include('sprint1.almacens.partials.form')
 
                 {!! Form::close() !!}
             </div>

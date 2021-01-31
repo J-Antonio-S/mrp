@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Gestión Administrativa | MRP')
+@section('title', 'Sprint 2 | MRP')
 
 @section('styles')
     <style>
@@ -24,7 +24,7 @@
               <div class="icon icon-primary">
                   <i class="material-icons">apartment</i>
               </div>
-              <h4 class="info-title">Departamento</h4>
+              <h4 class="info-title">otro 1 </h4>
           </a>
       </div>
   </div>
@@ -35,7 +35,7 @@
               <div class="icon icon-success">
                   <i class="material-icons">local_library</i>
               </div>
-              <h4 class="info-title">Área </h4>
+              <h4 class="info-title">otro 2 </h4>
           </a>
       </div>
   </div>

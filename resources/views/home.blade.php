@@ -225,7 +225,7 @@
                     
                     <div class="col-md-4">
                         <div class="info">
-                            <a class="" href="{{ route('ges_adm') }}">
+                            <a class="" href="{{ route('sprint1') }}">
                                 <div class="icon icon-primary">
                                     <i class="material-icons">admin_panel_settings</i>
                                 </div>

@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Productos')
+@section('title', 'Departamentos')
 
 @section('body-class', 'landing-page')
 

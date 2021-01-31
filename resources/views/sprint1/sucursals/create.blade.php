@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Editar | MRP')
+@section('title', 'Crear')
 
 @section('body-class', 'landing-page')
 
@@ -20,9 +20,9 @@
 
         <div class="tarjeta">
             <div class="card card-crud card-nav-tabs text-center">
-                {!! Form::model($area, ['route' => ['areas.update', $area->id], 'method' => 'PUT']) !!}
-            
-                    @include('gestion-administrativa.area.partials.form')
+                {!! Form::open(['route' => ['sucursals.store']]) !!}
+
+                @include('sprint1.sucursals.partials.form')
 
                 {!! Form::close() !!}
             </div>
@@ -31,4 +31,5 @@
     </div>
         
 </div>
+
 @endsection

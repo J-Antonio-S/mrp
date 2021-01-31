@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Crear')
+@section('title', 'Editar')
 
 @section('body-class', 'landing-page')
 
@@ -20,16 +20,15 @@
 
         <div class="tarjeta">
             <div class="card card-crud card-nav-tabs text-center">
-                {!! Form::open(['route' => ['sucursals.store']]) !!}
+                {!! Form::model($sucursal, ['route' => ['sucursals.update', $sucursal->id], 'method' => 'PUT']) !!}
 
-                @include('sucursals.partials.form')
+                @include('sprint1.sucursals.partials.form')
 
                 {!! Form::close() !!}
             </div>
         </div>
 
-    </div>
-        
+    </div>        
 </div>
 
 @endsection

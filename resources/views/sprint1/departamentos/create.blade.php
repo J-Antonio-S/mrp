@@ -22,7 +22,7 @@
             <div class="card card-crud card-nav-tabs text-center">
                 {!! Form::open(['route' => ['departamentos.store']]) !!}
 
-                @include('gestion-administrativa/departamentos.partials.form')
+                @include('sprint1/departamentos.partials.form')
 
                 {!! Form::close() !!}
             </div>
