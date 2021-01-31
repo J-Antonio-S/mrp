@@ -208,4 +208,8 @@ Route::get('almacens/{almacen}/edit', 'AlmacenController@edit')->name('almacens.
 });
 
 
+Route::resource('gestion-administrativa/estado','EstadoController');
 
+Route::resource('gestion-administrativa/provincia','ProvinciaController');
+
+Route::resource('gestion-administrativa/municipio','MunicipioController');
