@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.settings')
 
-@section('title', 'Bienvenido a ' . config('app.name'))
+@section('title', 'Roles y permisos')
 
 @section('body-class', 'landing-page')
 
@@ -16,7 +16,7 @@
     </style>
 @endsection
 
-@section('content')
+@section('contenido-central')
 <div class="main ">
     <div class="container">
 

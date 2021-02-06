@@ -20,6 +20,8 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/sprint1', 'HomeController@sprint1')->name('sprint1');
 	//Sprint 2
 	Route::get('/sprint2', 'HomeController@sprint2')->name('sprint2');
+	//Herramientas
+	Route::get('/herramientas', 'HomeController@settings')->name('settings');
 	//Nómina
 	Route::get('/nomina', 'HomeController@nomina')->name('nomina');
 	//Inventario
@@ -185,13 +187,13 @@ Route::middleware(['auth'])->group(function () {
 		->middleware('can:area.create');
 		
 	//Estado
-	Route::resource('sprint1/estado','EstadoController');
+	Route::resource('sprint1/estado','EstadoController')->name('estado','estado.index');
 
 	//Provincia
-	Route::resource('sprint1/provincia','ProvinciaController');
+	Route::resource('sprint1/provincia','ProvinciaController')->name('provincia','provincia.index');
 
 	//Municipio
-	Route::resource('sprint1/municipio','MunicipioController');
+	Route::resource('sprint1/municipio','MunicipioController')->name('municipio','municipio.index');
 
 });
 

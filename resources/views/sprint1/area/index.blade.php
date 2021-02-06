@@ -12,9 +12,6 @@
         ul.pagination {
             justify-content: center;
         }
-        .section {
-          padding: 5px !important; 
-      }
 
     </style>
 @endsection

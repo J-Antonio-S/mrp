@@ -24,6 +24,9 @@
                     display: none;
                 }
             }
+            .section {
+                padding: 10px 0 !important; 
+            }
         </style>
 
                 

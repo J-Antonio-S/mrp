@@ -36,10 +36,12 @@ class HomeController extends Controller
         return view('sprint2.home');
     }
     
-      public function inventario(){
+    public function inventario(){
       return view('inventario.inventario');
     }
-
+    public function settings(){
+        return view('herramientas.herramientas');
+    }
 
     public function nomina(){
         $empleados = DB::table('historial_empleado')

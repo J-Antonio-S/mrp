@@ -282,11 +282,11 @@
 
                     <div class="col-md-4">
                         <div class="info">
-                            <a href="">
+                            <a href="{{ route('settings') }}">
                                 <div class="icon icon-rose">
                                     <i class="material-icons">settings_applications</i>
                                 </div>
-                                <h4 class="info-title">Producción</h4>
+                                <h4 class="info-title">Herramientas</h4>
                             </a>
                         </div>
                     </div>

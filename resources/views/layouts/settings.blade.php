@@ -121,50 +121,34 @@
       <nav id="navbar">
         <header class="">Sistema MRP</header>
         <ul class="nav flex-column">
-          <li>
-            <a class="nav-link" href="{{ route('sprint1') }}">Sprint 1</a>
-            <ul class="nav flex-column">
-                <li><a class="nav-pills" href="{{ route('departamentos.index') }}">Departamento </a></li>
-                <li><a class="nav-pills" href="{{ route('area.index') }}">Área </a></li>
-                <li><a class="nav-pills" href="{{ route('sucursals.index') }}">Sucursal </a></li>
-                <li><a class="nav-pills" href="{{ route('almacens.index') }}">Almacén </a></li>
-                <li><a class="nav-pills" href="{{ route('municipio.index') }}">Municipio </a></li>
-                <li><a class="nav-pills" href="{{ route('provincia.index') }}">Provincia </a></li>
-                <li><a class="nav-pills" href="{{ route('estado.index') }}">Estado </a></li>
-                <li><a class="nav-pills" href="#">Cargo </a></li>
-                <li><a class="nav-pills" href="#">Empleado </a></li>
-            </ul>
-          </li> 
             <li>
-                <a class="nav-link" href="{{ route('sprint2') }}">Sprint 2</a>
-                <ul class="nav flex-column">
-                <li><a class="nav-pills" href="#">Categoría </a></li>
-                <li><a class="nav-pills" href="#">Sub Categoría </a></li>
-                <li><a class="nav-pills" href="#">Unidad de Medida </a></li>
-                <li><a class="nav-pills" href="#">Artículo </a></li>
-                <li><a class="nav-pills" href="#">Contacto </a></li>
-                <li><a class="nav-pills" href="#">Proveedor </a></li>
-                </ul>
-            </li>
-            <li>
-              <a class="nav-link" href="{{ route('inventario') }}">Sprint 3</a>
-                <ul class="nav flex-column">
-                    <li><a class="nav-pills" href="#">Tarea 1 </a></li>
-                    <li><a class="nav-pills" href="#">Tarea 2 </a></li>
-                    <li><a class="nav-pills" href="#">Tarea 3 </a></li>
-                    <li><a class="nav-pills" href="#">Tarea 4 </a></li>
-                </ul>
-            </li>
-            <li>
-              <a class="nav-link" href="#Producción">Producción</a>
-              <ul class="nav flex-column">
-                <li><a class="nav-pills" href="#">BoM </a></li>
-                <li><a class="nav-pills" href="#">MPS </a></li>
-                <li><a class="nav-pills" href="#">MRP </a></li>
-                </ul>
+              <a class="nav-link icon icon-primary" 
+              href="{{ route('settings') }}">Herramientas</a>
             </li> 
+
             <li>
-              <a class="nav-link" href="{{ route('settings') }}">Herramientas</a>
+              <a class="nav-pills" href="{{ route('roles.index') }}">
+                <i class="material-icons icon icon-primary">fact_check</i>
+                Roles y permisos
+              </a>              
+            </li>
+            <li>
+              <a class="nav-pills" href="{{ route('bitacora') }}">
+                <i class="material-icons icon icon-success">list_alt</i>
+                Bitácora
+              </a>              
+            </li>
+            <li>
+              <a class="nav-pills" href="#">
+                <i class="material-icons icon icon-danger">manage_search</i>
+                Reportes
+              </a>              
+            </li>
+            <li>
+              <a class="nav-pills" href="">
+                <i class="material-icons icon icon-info">backup</i>
+                Backup
+              </a>              
             </li>
         </ul>
       </nav>
