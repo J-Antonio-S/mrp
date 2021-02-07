@@ -195,6 +195,28 @@ Route::middleware(['auth'])->group(function () {
 	//Municipio
 	Route::resource('sprint1/municipio','MunicipioController')->name('municipio','municipio.index');
 
+	//Cargo
+    Route::get('sprint1/cargos', 'CargoController@index')->name('cargos.index')
+        ->middleware('can:cargos.index');
+
+    Route::get('cargos/{cargos}', 'CargoController@show')->name('cargos.show')
+        ->middleware('can:materia_prima.show');
+
+    Route::get('cargos/{cargos}/edit', 'CargoController@edit')->name('cargos.edit')
+        ->middleware('can:cargos.edit');
+
+    Route::delete('cargos/{cargos}', 'CargoController@destroy')->name('cargos.destroy')
+        ->middleware('can:cargos.destroy');
+
+    Route::put('cargos/{cargos}', 'CargoController@update')->name('cargos.update')
+        ->middleware('can:cargos.edit');
+
+    Route::get('sprint1/cargos/create', 'CargoController@create')->name('cargos.create')
+        ->middleware('can:cargos.create');
+
+    Route::post('cargos/store', 'CargoController@store')->name('cargos.store')
+		->middleware('can:cargos.create');
+
 });
 
 
