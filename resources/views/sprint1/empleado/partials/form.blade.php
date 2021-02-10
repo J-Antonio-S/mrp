@@ -16,7 +16,7 @@
 </div>
 <div class="form-group">
 	{{ Form::label('email', 'Correo Electrónico:') }}
-	{{ Form::text('email', null, ['class' => 'form-control', 'id' => 'email']) }}
+	{{ Form::email('email', null, ['class' => 'form-control ', 'id' => 'email']) }}
 </div>
 <div class="form-group">
 	{{ Form::label('fecha_nac', 'Fecha de Nacimiento:') }}
@@ -24,32 +24,65 @@
 </div>
 <div class="form-group">
 	{{ Form::label('telefono', 'Teléfono:') }}
-	{{ Form::text('telefono', null, ['class' => 'form-control', 'id' => 'telefono']) }}
+	{{ Form::tel('telefono', null, ['class' => 'form-control', 'id' => 'telefono']) }}
 </div>
 <div class="form-group">
 	{{ Form::label('foto', 'Foto:') }}
 	{{ Form::text('foto', null, ['class' => 'form-control', 'id' => 'foto']) }}
 </div>
 
+<div class="form-group">
+    {{Form::label('id_sucursal','Seleccionar sucursal: ')}}
+    <select name="id_sucursal" id="id_sucursal">Seleccionar sucursal
+        @foreach($sucursales as $sucursal)
+            <option value="{{ $sucursal->id }}" 
+				@if( $sucursal->id === $empleado->id_sucursal)
+					selected
+				@endif
+			>
+                {{$sucursal->descripcion}}
+            </option>
+        @endforeach
+    </select>
+</div>
+
+<div class="form-group">
+    {{Form::label('id_departamento','Seleccionar departamento: ')}}
+    <select name="id_departamento" id="id_departamento">Seleccionar departamento
+        @foreach($departamentos as $departamento)
+            <option value="{{ $departamento->id }}" 
+				@if( $departamento->id === $empleado->id_departamento)
+					selected
+				@endif
+			>
+                {{$departamento->nombre}}
+            </option>
+        @endforeach
+    </select>
+</div>
 
 
-
+<div class="form-group">
+    {{Form::label('id_cargo','Seleccionar cargo: ')}}
+    <select name="id_cargo" id="id_cargo">Seleccionar cargo
+        @foreach($cargos as $cargo)
+            <option value="{{ $cargo->id }}" 
+				@if( $cargo->id === $empleado->id_cargo)
+					selected
+				@endif
+			>
+                {{$cargo->nombre}}
+            </option>
+        @endforeach
+    </select>
+</div>
 
 
 <div class="form-group">
 	{{ Form::label('estado', 'Estado:') }}
 	{{ Form::select('estado', ['1'=>'Activo','0'=>'Inactivo'], ['multiple class' => 'form-control']) }}
 </div>
-<div class="form-group">
-    {{Form::label('departamento_id','Seleccionar departamento: ')}}
-    <select name="departamento_id" id="departamento_id">Seleccionar departamento
-        @foreach($departamentos as $departamento)
-            <option value="{{ $departamento->id }}" >
-                {{$departamento->nombre}}
-            </option>
-        @endforeach
-    </select>
-</div>
+
 <div class="form-group">
 	{{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
 </div>

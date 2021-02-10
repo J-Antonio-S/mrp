@@ -217,6 +217,27 @@ Route::middleware(['auth'])->group(function () {
     Route::post('cargos/store', 'CargoController@store')->name('cargos.store')
 		->middleware('can:cargos.create');
 
+	//Empleado
+    Route::get('sprint1/empleado', 'EmpleadoController@index')->name('empleados.index')
+        ->middleware('can:empleado.index');
+
+    Route::get('empleado/{empleado}', 'EmpleadoController@show')->name('empleados.show')
+        ->middleware('can:materia_prima.show');
+
+    Route::get('empleado/{empleado}/edit', 'EmpleadoController@edit')->name('empleados.edit')
+        ->middleware('can:empleado.edit');
+
+    Route::delete('empleado/{empleado}', 'EmpleadoController@destroy')->name('empleados.destroy')
+        ->middleware('can:empleado.destroy');
+
+    Route::put('empleado/{empleado}', 'EmpleadoController@update')->name('empleados.update')
+        ->middleware('can:empleado.edit');
+
+    Route::get('sprint1/empleado/create', 'EmpleadoController@create')->name('empleados.create')
+        ->middleware('can:empleado.create');
+
+    Route::post('empleado/store', 'EmpleadoController@store')->name('empleados.store')
+		->middleware('can:empleado.create');
 });
 
 

@@ -24,8 +24,8 @@
             <h2 class="title text-center">Empleados
                 @can('empleados.create')
                     <a href="{{ route('empleados.create') }}" 
-                    class="btn btn-sm btn-primary pull-right">
-                        Crear Nueva Area
+                    class="btn btn-sm btn-success pull-right">
+                        Crear Nuevo Empleado
                     </a>
                 @endcan
             </h2>
@@ -51,13 +51,13 @@
                             @foreach($empleados as $empleado)
                             <tr>
                                 <td>{{ $empleado->id }}</td>
-                                <td>{{ $empleado->codigo }}<
+                                <td>{{ $empleado->codigo }}</td>
                                 <td>{{ $empleado->cedula }}</td>
                                 <td>{{ $empleado->nombre }}</td>
                                 <td>{{ $empleado->direccion}}</td>
-                                <td>{{ $empleado->id_departamento}}</td>
-                                <td>{{ $empleado->id_sucursal}}</td>
-                                <td>{{ $empleado->id_cargo}}</td>
+                                <td>{{ $empleado->departamento}}</td>
+                                <td>{{ $empleado->sucursal}}</td>
+                                <td>{{ $empleado->cargo}}</td>
                                 <td>
                                     @if($empleado->estado == 1)
                                         Activo
@@ -69,7 +69,7 @@
                                 @can('empleados.show')
                                 <td width="10px">
                                     <a href="{{ route('empleados.show', $empleado->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-info">
                                         ver
                                     </a>
                                 </td>
@@ -77,7 +77,7 @@
                                 @can('empleados.edit')
                                 <td width="10px">
                                     <a href="{{ route('empleados.edit', $empleado->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-warning">
                                         editar
                                     </a>
                                 </td>

@@ -10,14 +10,25 @@ use App\Cargo;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
+use Carbon\Carbon;
+
 class EmpleadoController extends Controller
 {
 
     public function index()
     {
-        $empleados = Empleado::where('eliminado',false)->paginate();
+        $empleados = DB::table('empleados')
+        ->join('departamentos', 'departamentos.id', '=', 'id_departamento')
+        ->join('cargos', 'cargos.id', '=', 'id_cargo')
+        ->join('sucursals', 'sucursals.id', '=', 'id_sucursal')
+        ->select('empleados.*',
+                 'departamentos.nombre as departamento',
+                 'cargos.nombre as cargo',
+                 'sucursals.descripcion as sucursal'
+                )
+        ->paginate(15);
 
-        return view('sprint1/empleados.index', compact('empleados'));
+        return view('sprint1/empleado.index', compact('empleados'));
     }
 
     /**
@@ -27,11 +38,12 @@ class EmpleadoController extends Controller
      */
     public function create()
     {
-        $departamentos  = Departamento::All()->orderBy('nombre', 'desc');
-        $sucursales     = Sucursal::All()->orderBy('descripcion', 'desc');
-        $cargos         = Cargo::All()->orderBy('nombre', 'desc');
+        $empleado       = Empleado::first();
+        $departamentos  = Departamento::orderBy('nombre', 'asc')->get();
+        $sucursales     = Sucursal::orderBy('descripcion', 'asc')->get();
+        $cargos         = Cargo::orderBy('nombre', 'asc')->get();
 
-        return view('sprint1/empleados.create', compact('departamentos', 'sucursales', 'cargos'));
+        return view('sprint1/empleado.create', compact('departamentos', 'sucursales', 'cargos','empleado'));
     }
 
     /**
@@ -57,8 +69,12 @@ class EmpleadoController extends Controller
     public function show($id)
     {
         $empleado = Empleado::find($id);
+        $departamento = Departamento::find($empleado->id_departamento);
+        $sucursal = Sucursal::find($empleado->id_sucursal);
+        $cargo = Cargo::find($empleado->id_cargo);
 
-        return view('sprint1/empleados.show', compact('empleado'));
+        $edad= Carbon::parse($empleado->fecha_nac )->age;
+        return view('sprint1/empleado.show', compact('empleado','edad','departamento','sucursal','cargo'));
     }
 
     /**
@@ -70,8 +86,11 @@ class EmpleadoController extends Controller
     public function edit($id)
     {
         $empleado = Empleado::find($id);
+        $departamentos  = Departamento::orderBy('nombre', 'asc')->get();
+        $sucursales     = Sucursal::orderBy('descripcion', 'asc')->get();
+        $cargos         = Cargo::orderBy('nombre', 'asc')->get();
 
-        return view('sprint1/empleados.edit', compact('empleado'));
+        return view('sprint1/empleado.edit', compact('empleado','departamentos','sucursales','cargos'));
     }
 
     /**

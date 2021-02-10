@@ -132,7 +132,7 @@
                 <li><a class="nav-pills" href="{{ route('provincia.index') }}">Provincia </a></li>
                 <li><a class="nav-pills" href="{{ route('estado.index') }}">Estado </a></li>
                 <li><a class="nav-pills" href="{{ route('cargos.index') }}">Cargo </a></li>
-                <li><a class="nav-pills" href="#">Empleado </a></li>
+                <li><a class="nav-pills" href="{{ route('empleados.index') }}">Empleado </a></li>
             </ul>
           </li> 
             <li>

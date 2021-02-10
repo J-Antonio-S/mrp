@@ -14,7 +14,7 @@
 <div class="tarjeta">
     <div class="card col-md-6">
         <div class="card-title btn btn-primary">
-            Area
+            Empleado
         </div>
         <div class="card-body">
             <span class="detalle">
@@ -43,7 +43,7 @@
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Edad:</h6>
-                <p class="item col-md-8">{{ $empleado->fecha_nac }}</p>
+                <p class="item col-md-8"> {{ $edad  }} años</p>
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Teléfono:</h6>
@@ -55,15 +55,15 @@
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Departamento:</h6>
-                <p class="item col-md-8">{{ $empleado->id_departamento }}</p>
+                <p class="item col-md-8">{{ $departamento->nombre }}</p>
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Sucursal:</h6>
-                <p class="item col-md-8">{{ $empleado->id_sucursal }}</p>
+                <p class="item col-md-8">{{ $sucursal->descripcion }}</p>
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Cargo:</h6>
-                <p class="item col-md-8">{{ $empleado->id_cargo }}</p>
+                <p class="item col-md-8">{{ $cargo->nombre }}</p>
             </span>
             <span class="detalle">
                 <h6 class="item col-md-4">Estado: </h6>
