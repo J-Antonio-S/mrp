@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', 'Cargos')
+@section('title', 'Gestión Cargos')
 
 @section('body-class', 'landing-page')
 
@@ -24,7 +24,7 @@
             <h2 class="title text-center">Cargos
                 @can('cargos.create')
                     <a href="{{ route('cargos.create') }}" 
-                    class="btn btn-sm btn-primary pull-right">
+                    class="btn btn-sm btn-success pull-right">
                         Crear Nuevo Cargo
                     </a>
                 @endcan
@@ -60,7 +60,7 @@
                                 @can('cargos.show')
                                 <td width="10px">
                                     <a href="{{ route('cargos.show', $cargo->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-info">
                                         ver
                                     </a>
                                 </td>
@@ -68,7 +68,7 @@
                                 @can('cargos.edit')
                                 <td width="10px">
                                     <a href="{{ route('cargos.edit', $cargo->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-warning">
                                         editar
                                     </a>
                                 </td>

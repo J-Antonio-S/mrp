@@ -24,7 +24,7 @@
             <h2 class="title text-center">Almacenes
                 @can('almacens.create')
                     <a href="{{ route('almacens.create') }}" 
-                    class="btn btn-sm btn-primary pull-right">
+                    class="btn btn-sm btn-success pull-right">
                         Crear Nuevo Almacen
                     </a>
                 @endcan
@@ -52,7 +52,7 @@
                                 @can('almacens.show')
                                 <td width="10px">
                                     <a href="{{ route('almacens.show', $almacen->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-info">
                                         ver
                                     </a>
                                 </td>
@@ -60,7 +60,7 @@
                                 @can('almacens.edit')
                                 <td width="10px">
                                     <a href="{{ route('almacens.edit', $almacen->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-warning">
                                         editar
                                     </a>
                                 </td>

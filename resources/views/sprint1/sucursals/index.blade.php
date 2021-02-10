@@ -24,7 +24,7 @@
             <h2 class="title text-center">Sucursales
                 @can('sucursals.create')
                     <a href="{{ route('sucursals.create') }}" 
-                    class="btn btn-sm btn-primary pull-right">
+                    class="btn btn-sm btn-success pull-right">
                         Crear Nueva Sucursal
                     </a>
                 @endcan
@@ -54,7 +54,7 @@
                                 @can('sucursals.show')
                                 <td width="10px">
                                     <a href="{{ route('sucursals.show', $sucursal->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-info">
                                         ver
                                     </a>
                                 </td>
@@ -62,7 +62,7 @@
                                 @can('sucursals.edit')
                                 <td width="10px">
                                     <a href="{{ route('sucursals.edit', $sucursal->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-warning">
                                         editar
                                     </a>
                                 </td>

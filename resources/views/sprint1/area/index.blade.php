@@ -24,7 +24,7 @@
             <h2 class="title text-center">Area
                 @can('areas.create')
                     <a href="{{ route('areas.create') }}" 
-                    class="btn btn-sm btn-primary pull-right">
+                    class="btn btn-sm btn-success pull-right">
                         Crear Nueva Area
                     </a>
                 @endcan
@@ -62,7 +62,7 @@
                                 @can('areas.show')
                                 <td width="10px">
                                     <a href="{{ route('areas.show', $area->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-info">
                                         ver
                                     </a>
                                 </td>
@@ -70,7 +70,7 @@
                                 @can('areas.edit')
                                 <td width="10px">
                                     <a href="{{ route('areas.edit', $area->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-warning">
                                         editar
                                     </a>
                                 </td>

@@ -24,7 +24,7 @@
             <h2 class="title text-center">Departamentos
                 @can('departamentos.create')
                     <a href="{{ route('departamentos.create') }}" 
-                    class="btn btn-sm btn-primary pull-right">
+                    class="btn btn-sm btn-success pull-right">
                         Crear Nuevo Departamento
                     </a>
                 @endcan
@@ -58,7 +58,7 @@
                                 @can('departamentos.show')
                                 <td width="10px">
                                     <a href="{{ route('departamentos.show', $departamento->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-info">
                                         ver
                                     </a>
                                 </td>
@@ -66,7 +66,7 @@
                                 @can('departamentos.edit')
                                 <td width="10px">
                                     <a href="{{ route('departamentos.edit', $departamento->id) }}" 
-                                    class="btn btn-sm btn-default">
+                                    class="btn btn-sm btn-warning">
                                         editar
                                     </a>
                                 </td>

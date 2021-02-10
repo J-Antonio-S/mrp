@@ -26,6 +26,7 @@ class EmpleadoController extends Controller
                  'cargos.nombre as cargo',
                  'sucursals.descripcion as sucursal'
                 )
+        ->orderBy('codigo')
         ->paginate(15);
 
         return view('sprint1/empleado.index', compact('empleados'));
