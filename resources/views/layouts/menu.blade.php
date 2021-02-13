@@ -142,8 +142,8 @@
                 <li><a class="nav-pills" href="#">Sub Categoría </a></li>
                 <li><a class="nav-pills" href="#">Unidad de Medida </a></li>
                 <li><a class="nav-pills" href="#">Artículo </a></li>
-                <li><a class="nav-pills" href="#">Contacto </a></li>
-                <li><a class="nav-pills" href="#">Proveedor </a></li>
+                <li><a class="nav-pills" href="{{ route('contactos.index') }}">Contacto </a></li>
+                <li><a class="nav-pills" href="{{ route('proveedores.index') }}">Proveedor </a></li>
                 </ul>
             </li>
             <li>

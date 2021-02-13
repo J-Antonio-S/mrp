@@ -238,6 +238,50 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('empleado/store', 'EmpleadoController@store')->name('empleados.store')
 		->middleware('can:empleado.create');
+
+	//Proveedor
+    Route::get('sprint1/proveedor', 'ProveedorController@index')->name('proveedores.index')
+        ->middleware('can:proveedor.index');
+
+    Route::get('proveedor/{proveedor}', 'ProveedorController@show')->name('proveedores.show')
+        ->middleware('can:materia_prima.show');
+
+    Route::get('proveedor/{proveedor}/edit', 'ProveedorController@edit')->name('proveedores.edit')
+        ->middleware('can:proveedor.edit');
+
+    Route::delete('proveedor/{proveedor}', 'ProveedorController@destroy')->name('proveedores.destroy')
+        ->middleware('can:proveedor.destroy');
+
+    Route::put('proveedor/{proveedor}', 'ProveedorController@update')->name('proveedores.update')
+        ->middleware('can:proveedor.edit');
+
+    Route::get('sprint1/proveedor/create', 'ProveedorController@create')->name('proveedores.create')
+        ->middleware('can:proveedor.create');
+
+    Route::post('proveedor/store', 'ProveedorController@store')->name('proveedores.store')
+		->middleware('can:proveedor.create');
+		
+	//Contacto
+    Route::get('sprint1/contacto', 'ContactoController@index')->name('contactos.index')
+        ->middleware('can:contacto.index');
+
+    Route::get('contacto/{contacto}', 'ContactoController@show')->name('contactos.show')
+        ->middleware('can:materia_prima.show');
+
+    Route::get('contacto/{contacto}/edit', 'ContactoController@edit')->name('contactos.edit')
+        ->middleware('can:contacto.edit');
+
+    Route::delete('contacto/{contacto}', 'ContactoController@destroy')->name('contactos.destroy')
+        ->middleware('can:contacto.destroy');
+
+    Route::put('contacto/{contacto}', 'ContactoController@update')->name('contactos.update')
+        ->middleware('can:contacto.edit');
+
+    Route::get('sprint1/contacto/create', 'ContactoController@create')->name('contactos.create')
+        ->middleware('can:contacto.create');
+
+    Route::post('contacto/store', 'ContactoController@store')->name('contactos.store')
+		->middleware('can:contacto.create');
 });
 
 

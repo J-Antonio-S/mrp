@@ -24,18 +24,18 @@
               <div class="icon icon-primary">
                   <i class="material-icons">apartment</i>
               </div>
-              <h4 class="info-title">otro 1 </h4>
+              <h4 class="info-title">Proveedores </h4>
           </a>
       </div>
   </div>
 
   <div class="col-md-3">
       <div class="info">
-          <a class="" href="{{route('area.index')}}">
+          <a class="" href="{{route('contactos.index')}}">
               <div class="icon icon-success">
                   <i class="material-icons">local_library</i>
               </div>
-              <h4 class="info-title">otro 2 </h4>
+              <h4 class="info-title">Contacto </h4>
           </a>
       </div>
   </div>
@@ -46,7 +46,7 @@
               <div class="icon icon-danger">
                   <i class="material-icons">satellite</i>
               </div>
-              <h4 class="info-title">Sucursal</h4>
+              <h4 class="info-title">Artículo</h4>
           </a>
       </div>
   </div>
@@ -57,7 +57,7 @@
               <div class="icon icon-warning">
                   <i class="material-icons">assignment_late</i>
               </div>
-              <h4 class="info-title">Cargo</h4>
+              <h4 class="info-title">Categoría</h4>
           </a>
       </div>
   </div>
@@ -68,7 +68,7 @@
               <div class="icon icon-info">
                   <i class="material-icons">person</i>
               </div>
-              <h4 class="info-title">Empleado</h4>
+              <h4 class="info-title">Sub categoría</h4>
           </a>
       </div>
   </div>
