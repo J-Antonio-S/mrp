@@ -37,7 +37,11 @@
 		<select name="id_estado" id="id_estado">Seleccionar Estado
 			<option value="">Seleccione un estado</option>
 			@foreach($estados as $estado)
-				<option value="{{ $estado->id }}">
+				<option value="{{ $estado->id }}"
+					@if( $estado->id === $proveedor->id_estado)
+						selected
+					@endif	
+				>
 					{{$estado->nombre}}
 				</option>
 			@endforeach
@@ -47,14 +51,22 @@
 	<div class="form-group col-md-4">
 		{{Form::label('id_provincia','Seleccionar Provincia: ')}}
 		<select name="id_provincia" id="id_provincia">Seleccionar Provincia
-				<option value="">Seleccione provincia</option>
+				<option value="{{ proveedor->id_proveedor }}">{{ proveedor->provincia }}</option>
 		</select>
 	</div>
 
 	<div class="form-group col-md-4">
 		{{Form::label('id_municipio','Seleccionar Municipio: ')}}
 		<select name="id_municipio" id="id_municipio">Seleccionar Municipio
-				<option value="">Seleccione municipio</option>
+			@foreach($municipios as $municipio)
+					<option value="{{ $municipio->id }}"
+						@if( $municipio->id === $proveedor->id_municipio)
+							selected
+						@endif	
+					>
+						{{$municipio->nombre}}
+					</option>
+				@endforeach
 		</select>
 	</div>
 </div>

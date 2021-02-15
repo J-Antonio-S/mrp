@@ -22,7 +22,7 @@
             <div class="card card-crud card-nav-tabs text-center">
                 {!! Form::model($proveedor, ['route' => ['proveedores.update', $proveedor->id], 'method' => 'PUT']) !!}
             
-                    @include('sprint2.proveedor.partials.form')
+                    @include('sprint2.proveedor.partials.edit')
 
                 {!! Form::close() !!}
             </div>

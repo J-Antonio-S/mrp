@@ -21,7 +21,7 @@
     <div class="container">
 
         <div class="section">
-            <h2 class="title text-center">Empleados
+            <h2 class="title text-center">Proveedores
                 @can('proveedores.create')
                     <a href="{{ route('proveedores.create') }}" 
                     class="btn btn-sm btn-success pull-right">

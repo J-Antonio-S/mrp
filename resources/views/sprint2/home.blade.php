@@ -20,7 +20,7 @@
 <div class="row">
   <div class="col-md-3">
       <div class="info">
-          <a class="" href="{{route('departamentos.index')}}">
+          <a class="" href="{{route('proveedores.index')}}">
               <div class="icon icon-primary">
                   <i class="material-icons">apartment</i>
               </div>

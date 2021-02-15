@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Proveedor;
+
+use App\Estado;
+use App\Provincia;
 use App\Municipio;
 
 use Illuminate\Support\Facades\DB;
@@ -11,6 +14,15 @@ use Illuminate\Support\Facades\Log;
 
 class ProveedorController extends Controller
 {
+    public function byEstado($id)
+    {   
+        return Provincia::where('id_estado', $id)->get();
+    }
+    public function byProvincia($id)
+    {   
+        return Municipio::where('id_provincia', $id)->get();
+    }
+
     public function index()
     {
         $proveedores = DB::table('proveedors')
@@ -32,9 +44,11 @@ class ProveedorController extends Controller
     public function create()
     {
         $proveedor      = Proveedor::first();
+        $estados        = Estado::orderBy('nombre', 'asc')->get();
+
         $municipios     = Municipio::orderBy('nombre', 'asc')->get();
 
-        return view('sprint2/proveedor.create', compact('proveedor', 'municipios'));
+        return view('sprint2/proveedor.create', compact('proveedor', 'estados' ,'municipios'));
     }
 
     /**
@@ -73,10 +87,21 @@ class ProveedorController extends Controller
      */
     public function edit($id)
     {
-        $proveedor      = Proveedor::find($id);
-        $municipios     = Municipio::orderBy('nombre', 'asc')->get();
+        $proveedor = DB::table('proveedors')
+        ->join('municipio', 'municipio.id', '=', 'id_municipio')
+        ->join('provincia', 'provincia.id', '=', 'municipio.id_provincia')
+        ->where('proveedors.id','=',$id)
+        ->select('proveedors.*',
+                 'municipio.nombre as municipio',
+                 'provincia.nombre as provincia',
+                 'provincia.id as id_provincia',
+                 'provincia.id_estado as id_estado'
+                )->get();
 
-        return view('sprint2/proveedor.edit', compact('proveedor','municipios'));
+        $municipios     = Municipio::orderBy('nombre', 'asc')->get();
+        $estados        = Estado::orderBy('nombre', 'asc')->get();
+
+        return view('sprint2/proveedor.edit', compact('proveedor','municipios','estados'));
     }
 
     /**
