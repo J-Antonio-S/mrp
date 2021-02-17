@@ -96,8 +96,7 @@ class ProveedorController extends Controller
                  'provincia.nombre as provincia',
                  'provincia.id as id_provincia',
                  'provincia.id_estado as id_estado'
-                )->get();
-
+                )->first();
         $municipios     = Municipio::orderBy('nombre', 'asc')->get();
         $estados        = Estado::orderBy('nombre', 'asc')->get();
 

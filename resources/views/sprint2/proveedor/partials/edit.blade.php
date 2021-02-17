@@ -51,7 +51,7 @@
 	<div class="form-group col-md-4">
 		{{Form::label('id_provincia','Seleccionar Provincia: ')}}
 		<select name="id_provincia" id="id_provincia">Seleccionar Provincia
-				<option value="{{ proveedor->id_proveedor }}">{{ proveedor->provincia }}</option>
+				<option value="{{ $proveedor->id_provincia }}">{{ $proveedor->provincia }}</option>
 		</select>
 	</div>
 
@@ -66,7 +66,7 @@
 					>
 						{{$municipio->nombre}}
 					</option>
-				@endforeach
+			@endforeach
 		</select>
 	</div>
 </div>
