@@ -17,6 +17,11 @@
 
         .features {
             text-align: center !important;
+            padding-top: 0px !important;
+        }
+
+        .title {
+            margin-top: 0px !important;
         }
 
         .icon-primary:hover {
@@ -197,6 +202,10 @@
         .icon-rose:hover:before,.icon-rose:hover:after{
             width:100%;
             transition:800ms ease all;
+        }
+
+        .info {
+            padding-top: 50px; 
         }
         
     </style>

@@ -8,6 +8,7 @@ use App\Proveedor;
 use App\Estado;
 use App\Provincia;
 use App\Municipio;
+use App\Contacto;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -73,10 +74,13 @@ class ProveedorController extends Controller
      */
     public function show($id)
     {
-        $proveedor = Proveedor::find($id);
-        $municipio   = Municipio::find($proveedor->id_municipio);
-
-        return view('sprint2/proveedor.show', compact('proveedor','municipio'));
+        $proveedor      = Proveedor::find($id);
+        $municipio      = Municipio::find($proveedor->id_municipio);
+        
+        $provincia      = Provincia::find($municipio->id_provincia);
+        $estado         = Estado::find($provincia->id_estado);
+        $contactos      = Contacto::where('id_proveedor',$proveedor->id)->get();
+        return view('sprint2/proveedor.show', compact('proveedor','municipio','provincia','estado','contactos'));
     }
 
     /**

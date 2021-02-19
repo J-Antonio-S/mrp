@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('title', $contacto->nombre .' | MRP')
+@section('title', 'Contacto '. $contacto->nombre .' | MRP')
 
 @section('body-class', 'landing-page')
 
@@ -14,7 +14,7 @@
 <div class="tarjeta">
     <div class="card col-md-6">
         <div class="card-title btn btn-info">
-            Proveedor
+            Contacto
         </div>
         <div class="card-body">
             <span class="detalle">

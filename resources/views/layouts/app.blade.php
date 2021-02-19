@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="{{ url('/favicon.ico') }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
         <title>@yield('title', config('app.name'))</title>
