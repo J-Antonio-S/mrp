@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="{{ url('/favicon.ico') }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
         <title>@yield('title', config('app.name'))</title>
@@ -23,6 +23,9 @@
                 .nav-bar {
                     display: none;
                 }
+            }
+            .section {
+                padding: 10px 0 !important; 
             }
         </style>
 
@@ -59,6 +62,16 @@
                         @can('products.index')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('products.index') }}">Productos</a>
+                        </li>
+                        @endcan
+                        @can('sucursals.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('sucursals.index') }}">Sucursal</a>
+                        </li>
+                        @endcan
+                        @can('almacens.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('almacens.index') }}">Almacen</a>
                         </li>
                         @endcan
                         @can('users.index')

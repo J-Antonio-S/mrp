@@ -21,10 +21,6 @@ class CreateProductsTable extends Migration
             $table->text('long_description')->nullable();
             $table->float('price');
 
-            //FK
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
-            $table->timestamps();
         });
     }
 
